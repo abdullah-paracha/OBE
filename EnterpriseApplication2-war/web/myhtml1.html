@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   <script src= "https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script src= "https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 550px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+        
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse visible-xs">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">1st Semester</a></li>
+        <li><a href="#">2nd Semester</a></li>
+        <li><a href="#">3rd Semester</a></li>
+        <li><a href="#">4th Semester</a></li>
+        <li><a href="#">5th Semester</a></li>
+        <li><a href="#">6th Semester</a></li>
+        <li><a href="#">7th Semester</a></li>
+        <li><a href="#">8th Semester</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav hidden-xs">
+      <h2>Logo</h2>
+      <ul class="nav nav-pills nav-stacked">
+          <li class="active"><a href="#">1st Semester</a></li>
+        <li><a href="#">2nd Semester</a></li>
+        <li><a href="#">3rd Semester</a></li>
+        <li><a href="#">4th Semester</a></li>
+        <li><a href="#">5th Semester</a></li>
+        <li><a href="#">6th Semester</a></li>
+        <li><a href="#">7th Semester</a></li>
+        <li><a href="#">8th Semester</a></li>
+      </ul><br>
+    </div>
+    <br>
+    
+    <div class="col-sm-9">
+         <div class="well" id="subjects">
+         
+      </div>
+        
+        <script type="text/babel">
+function SideBar(props)
+{
+    return(<input type="submit" value={props.Name} />);
+}
+  
+var list1={'Semester':"First",'Sub1':"BEE",'Sub2':"ELP",'Sub3':"AP",'Sub4':"Math",'Sub5':"CF"};
+var list2={'Semester':"Second",'Sub1':"BEE1",'Sub2':"ELP",'Sub3':"AP",'Sub4':"Math",'Sub5':"CF"};
+ const element=<SideBar Name="BEE"/>;
+ ReactDOM.render(element,document.getElementById('subjects'));
+ 
+ 
+</script>
+
+      <div class="well">
+        <h4>Dashboard</h4>
+        <p>Some text..</p>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="well">
+            <h4>Attendance</h4>
+            <p>xx%</p> 
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="well">
+            <h4>Overall Performance</h4>
+            <p>.......</p> 
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="well">
+              <h4>Activities</h4>
+            <p>Activity1</p> 
+            <p>Activity2</p> 
+            <p>Activity3</p> 
+          </div>
+        </div>  
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="well">
+              <h2>Footer</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE>
+<html >
+<head>
+
+
+ <link rel="stylesheet" type="text/css" href="AddClassActivity.css" />
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+form{
+width:900px;
+margin-right:140px;
+padding:60px;
+color:white;
+font-size:20px;
+}
+input[type=text]{
+width:100%;
+padding:8px;
+font-size:18px;
+}
+td{
+padding:7px;
+}
+  textarea { 
+    border-style: none; 
+    border-color: Transparent; 
+    overflow: auto;        
+  }
+</style>
+
+</head>
+
+<body>
+ 
+<center>
+	
+	<div style="height:700px;width:1050px;overflow:auto;background-color:white;border: 2px solid #747780;list-style:none;color:black;scrollbar-base-color:gold;font-family:sans-serif;padding:10px;">
+
+   <div id="wrapper">
+      
+         <div id="header">		 
+		   <h3 align="left" style="font-family:verdana;"><b>SECTION</b></h3>		 			   
+		 </div>	 
+		 <pre>       </pre>
+	<Form method="post" action="AddActivity">
+           
+	<table>
+	<tr>
+	<td><b>Activity/Assignment Method:</b><input type="text" name="Activity" class="form-control" placeholder="select ACTIVITY/ASSIGNMENT METHOD" > </td>
+        <td> <b>Name: </b> <input type="text" name="Name" class="form-control" placeholder="enter name"> </td>
+	
+	<tr>
+	<td> <b>Total Marks: </b> <input  type='number' name="Marks" class="form-control" placeholder="0.00"></td>
+         <td><b>%weight:</b><input  type='number' name="Weight" class="form-control" placeholder="0.00"></td>
+       <td> <b>Date: </b> <input  type='date' name="Date" class="form-control" placeholder="select date"></td>
+       
+	</tr>
+	<tr>
+	 <td><h4><strong> SUB ACTIVITIES AND CLOs:</strong></h4></td>
+	</tr>
+ 
+<td><b>CLO1:</b><input  type='number' name="CLO1" class="form-control" placeholder="%weight"></td>
+<td><b>CLO2:</b><input  type='number' name="CLO2" class="form-control" placeholder="%weight"></td>
+<td><b>CLO3:</b><input  type='number' name="CLO3" class="form-control" placeholder="%weight"></td></tr>
+        <button class="button" onclick="disp()">REMOVE</button><input type="checkbox" name="CLO1" value="ON" id="c1" />
+		   <!--<button class="button">ADD</button>-->
+   <tr> <td><button class="button" type="submit">SAVE</button></td>
+
+   <script>
+       function disp(){
+      var x = document.getElementById("c1").checked;
+       if(x)
+       alert("heh");
+       
+    }
+       </script>
+	 
+	</tr>
+	</table>
+	</form>
+	
+	
+	
+	
+	
+	
+	
+</center>
+</body>

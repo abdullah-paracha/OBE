@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="ExportData.js"></script>
+    <title></title>
+     <style type="text/css">
+        body
+        {
+            font-family: Arial;
+            font-size: 10pt;
+        }
+        table
+        {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+        table th
+        {
+            background-color: #F7F7F7;
+            color: #333;
+            font-weight: bold;
+        }
+        table th, table td
+        {
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+       <table id="tb">
+        <tr>
+            <th>Customer Id</th>
+            <th>Name</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>John Hammond</td>
+            <td>United States</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Mudassar Khan</td>
+            <td>India</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Suzanne Mathews</td>
+            <td>France</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Robert Schidner</td>
+            <td>Russia</td>
+        </tr>
+    </table>
+      <input type="button" id="btnExport" value="Export" onclick="exportTableToExcel('tb','myfile')" />
+</body>
+</html>
+

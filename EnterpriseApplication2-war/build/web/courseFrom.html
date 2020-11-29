@@ -1,0 +1,135 @@
+<!DOCTYPE>
+<html >
+<head>
+
+
+ <link rel="stylesheet" type="text/css" href="courseform.css" />
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+form{
+width:900px;
+margin-right:140px;
+padding:80px;
+color:white;
+font-size:20px;
+}
+input[type=text]{
+width:100%;
+padding:8px;
+font-size:18px;
+}
+td{
+padding:10px;
+}
+  textarea { 
+    border-style: none; 
+    border-color: Transparent; 
+    overflow: auto;        
+  }
+</style>
+
+</head>
+
+<body>
+<center>
+	
+	<div style="height:650px;width:1050px;overflow:auto;background-color:white;border: 2px solid #747780;list-style:none;color:black;scrollbar-base-color:gold;font-family:sans-serif;padding:10px;">
+
+   <div id="wrapper">
+      
+         <div id="header">		 
+		   <h3 align="left" style="font-family:verdana;"><b>Course Form</b></h3>		 			   
+		 </div>	 
+		 <pre>       </pre>
+	<Form method="post" action="CourseFormSubmit">
+	<table>
+	<tr>
+	<td><b>Course Name</b><input type="text" name="CourseName" class="form-control" placeholder="enter course name" > </td>
+	<td> <b>Course code </b> <input type="text" name="CourseCode" class="form-control" placeholder="enter course code"></td>
+
+	<tr>
+	<td> <b>Session </b> <input  type='text' name="Session" class="form-control" placeholder="enter session"></td>
+	<td> <b>No. of CLOs </b> <input  type='text' name="No.ofCLos" class="form-control" placeholder="enter number of CLOs"></td>
+	</tr>
+	 <td><div class="custom-select" style="width:200px;">
+  <select name="Department">
+   <option>  Select Department  </option>
+           <option>Computer Engineering</option>
+           <option>Computer Sc</option>
+           <option>Civil</option>
+           <option>Electrical</option>
+           <option>Electronics</option>
+           <option>Industrial</option>
+           <option>Mechanical</option>
+           <option>Software</option>
+           <option>Telecom</option>
+  </select>
+	<td><div class="custom-select" style="width:500px;">
+  <select name="Semester">
+<option>Select Semester</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+</select>  
+</div></td>
+	<tr>
+	<td><b>CLO1:</b>
+	 <div style="height:100px;width:350px;overflow:auto;background-color:white;border: 2px solid #747780;color:black;scrollbar-base-color:gold;font-family:sans-serif;padding:10px;">
+		 <textarea name="CLO1" rows="5" cols="40" >
+</textarea>
+	<td><b>CLO2:</b>
+	 <div style="height:100px;width:350px;overflow:auto;background-color:white;border: 2px solid #747780;color:black;scrollbar-base-color:gold;font-family:sans-serif;padding:10px;">
+		 <textarea name="CLO2" rows="5" cols="40" >
+</textarea>
+	
+	
+	</tr>
+	<tr>
+	<td><b>CLO3:</b>
+	 <div style="height:100px;width:350px;overflow:auto;background-color:white;border: 2px solid #747780;color:black;scrollbar-base-color:gold;font-family:sans-serif;padding:10px;">
+		 <textarea name="CLO3" rows="5" cols="40" >
+</textarea>
+<td><b>CLO4:</b>
+	 <div style="height:100px;width:350px;overflow:auto;background-color:white;border: 2px solid #747780;color:black;scrollbar-base-color:gold;font-family:sans-serif;padding:10px;">
+		 <textarea name="CLO4" rows="5" cols="40" >
+</textarea>
+	</tr>
+	<tr>
+	<td><b>CLO5:</b>
+	 <div style="height:100px;width:350px;overflow:auto;background-color:white;border: 2px solid #747780;color:black;scrollbar-base-color:gold;font-family:sans-serif;padding:10px;">
+		 <textarea name="CLO5" rows="5" cols="40" >
+</textarea>
+<td><b>CLO6:</b>
+	 <div style="height:100px;width:350px;overflow:auto;background-color:white;border: 2px solid #747780;color:black;scrollbar-base-color:gold;font-family:sans-serif;padding:10px;">
+		 <textarea name="CLO6" rows="5" cols="40" >
+</textarea>
+
+	</tr>
+	
+
+<td><button class="button">SUBMIT</button>
+		
+<tr>
+		
+	<td></td>
+	</tr>
+	</table>
+	</form>
+	
+	
+	
+	
+	
+	
+	
+</center>
+</body>

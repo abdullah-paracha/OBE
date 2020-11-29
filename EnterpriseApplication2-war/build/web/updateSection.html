@@ -1,0 +1,145 @@
+<!DOCTYPE>
+<html >
+    <head>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <style>
+
+            * { padding: 0; margin: 0; }
+
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+            }
+            #wrapper { 
+                margin: 0 auto;
+                width: 1022px;
+            }
+
+
+            #header {
+                width:1000px;
+                float: left;
+                height: 50px;
+                margin: 0px 0px 0px 0px;
+                background: #cdcbcd;
+
+            }
+            #wrapper1{ 
+                margin: 0 auto;
+                width: 1022px;
+            }
+
+            #header1 {
+                width:1000px;
+                float: left;
+                height: 50px;
+                margin: 0px 0px 0px 0px;
+                background: #fbfbfb;
+
+            }
+
+            .button {
+                background-color: #890000;
+                border: none;
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                margin: 4px 2px;
+                cursor: pointer;
+
+            }
+            form{
+                width:900px;
+                margin-right:140px;
+                padding:80px;
+                color:white;
+                font-size:20px;
+            }
+            input[type=text]{
+                width:100%;
+                padding:8px;
+                font-size:18px;
+            }
+            td{
+                padding:10px;
+            }
+            textarea { 
+                border-style: none; 
+                border-color: Transparent; 
+                overflow: auto;        
+            }
+        </style>
+
+    </head>
+    <title>Update Info</title>
+    <body>
+    <center>
+
+        <div style="height:650px;width:1050px;overflow:auto;background-color:white;border: 2px solid #747780;list-style:none;color:black;scrollbar-base-color:gold;font-family:sans-serif;padding:10px;">
+
+            <div id="wrapper">
+
+                <div id="header">		 
+                    <h3 align="left" style="font-family:verdana;"><b>Update Section</b></h3>		 			   
+                </div>	 
+                <pre>       </pre>
+                <form method="post" name="updateForm">
+                    <table>
+                        <tr>
+                            <td><b>Semester</b><input type="text" class="form-control" name="methodname"  placeholder="Enter semester" > </td>
+                            <td> <b>Name </b> <input type="text"class="form-control"  name="name"  placeholder="Enter Name"></td>
+
+                        <tr>
+                            <td> <b>Reg no </b> <input  type='text' class="form-control" name="university"  placeholder="Enter Regno"></td>
+                            <td> <b>Teacher </b> <input  type='text'class="form-control"  name="teacher"  placeholder="Enter Teacher Name"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Course </b> <input type="text" class="form-control" name="name"  placeholder="enter course"> </td>
+                            <!-- <td> <b>Section   <input  type='text' name="marks"  placeholder="A/B/C"></td> -->
+                            <td><b>Finished<b>
+                                        <input type="checkbox" checked="checked">
+                                        <span class="checkmark"></span></td>
+                                        <td><b>Include in OBE<b>
+                                                    <input type="checkbox" checked="checked">
+                                                    <span class="checkmark"></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td> <b>Marks%  <input  type='text' class="form-control" name="marks"  placeholder="enter here"></td>
+                                                                <td> <b>student%   <input  type='text' class="form-control" name="marks"  placeholder="enter here"></td>
+                                                                        <tr>
+                                                                            <td><b>Notes</b>
+                                                                                <div style="height:100px;width:350px;overflow:auto;background-color:white;border: 2px solid #747780;color:black;scrollbar-base-color:gold;font-family:sans-serif;padding:10px;">
+                                                                                    <textarea rows="5" cols="40" >
+                                                                                    </textarea>
+
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td><button class="button">REMOVE</button>
+                                                                                <button class="button" onclick="output()">ADD</button>
+                                                                                <button onclick="output()" class="button">SAVE</button></td>
+                                                                        <tr>
+
+                                                                            <td></td>
+                                                                        </tr>
+                                                                        </table>
+                                                                        </form>
+
+
+
+                                                                        </center>
+                                                                        </body>
+                                                                        <script>
+                                                                            function output() {
+                                                                                alert("Data Updated");
+                                                                            }
+                                                                        </script>
+                                                                        </html>

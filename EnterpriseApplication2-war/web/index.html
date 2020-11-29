@@ -1,0 +1,174 @@
+  
+<html lang="en">
+<head>
+  <title>Welcome to IIUI-OBE Portal</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<style>
+ 
+    .login-container{
+    margin-top: 8%;
+    margin-bottom: 5%;
+}
+.login-form-1{
+    padding: 6%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-1 h3{
+    text-align: center;
+    font-style: italic;
+    color: #333;
+}
+.login-form-2{
+    padding: 6%;
+    background: #006400;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-2 h3{
+    font-style: italic;
+    text-align: center;
+    color: #fff;
+}
+.login-container form{
+    padding: 10%;
+}
+.btnSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+}
+.login-form-1 .btnSubmit{
+    font-weight: 600;
+    color: #fff;
+    background-color: #006400;
+}
+.login-form-2 .btnSubmit{
+    font-weight: 600;
+    color: #006400;
+    background-color: #fff;
+}
+.login-form-2 .ForgetPwd{
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+.login-form-1 .ForgetPwd{
+    color: #006400;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+</style>
+
+
+</head>
+<body>
+    
+    
+<div class="container login-container">
+            <div class="row">
+                <div class="col-md-6 login-form-1">
+                    <h3>Login for Student </h3>
+                    <form method="post" action="LogIn1" id="userForm" name="passForm">
+                        <div class="form-group">
+                            <input type="text" id="user" name="User Name" class="form-control" placeholder="Your Regno *" value=""/> </br>
+                            <p id="userp"> </p> 
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="password" name="Password" class="form-control" placeholder="Your Password *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="button" class="btnSubmit" onclick="formSubmit()" value="Login" />
+                        </div>
+                        <div class="form-group">
+                            <a href="#" class="ForgetPwd">Forget Password?</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6 login-form-2">
+                    <h3>Login for Faculty </h3>
+                    <form  action="http://localhost:8080/EnterpriseApplication2-war/FaculatyDashBoard.jsp"    method="post"  id="FacultyForm" name="passFForm" >
+                        <div class="form-group">
+                            <input type="text" id="Fuser" name="User name" class="form-control" placeholder="Your Name *" value="" /> </br>
+                     </br>
+                            <p id="us"> </p> 
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="Fpassword" name="Password" class="form-control" placeholder="Your Password *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btnSubmit" onclick="formSubmit2()" value="Login" />
+                        </div>
+                        <div class="form-group">
+
+                            <a href="#" class="ForgetPwd" value="Login">Forget Password?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div> 
+
+
+
+
+
+<script>
+ var username_reg=false;
+     var myRegExp = /^[0-9+]{4}-[a-z]{4}-[a-z0-9]{3}$/;
+     $(document).ready(function(){
+      
+      $("#user").focusout(function()
+   {
+      var user= document.getElementById("user").value;
+       if(myRegExp.test(user))
+         {
+           $('#userp').html("Invalid Format, Kindly check your Reg Number").css("color","white");
+           username_reg=true;
+          }
+    else
+    {
+       $('#userp').css("color","red");
+       username_reg=false;
+    }
+  }
+  );
+});
+
+
+    function formSubmit(){
+        document.getElementById("userForm");
+       var user= document.getElementById("user").value;
+     var password= document.getElementById("password").value; 
+     if(username_reg)
+     {
+          document.passForm.submit();
+     
+        
+         }
+      else
+      {
+      alert("Invalid Format, Kindly check your Reg Number");
+    
+        }}
+        
+    function formSubmit2(){
+        document.getElementById("FacultyForm");
+        var Fuser= document.getElementById("Fuser").value;
+       var Fpassword= document.getElementById("Fpassword").value;
+         document.passFForm.submit();
+     }
+        </script>
+   
+</body>
+</html>
+        

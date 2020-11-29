@@ -1,0 +1,307 @@
+package org.apache.jsp;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.jsp.*;
+import QOBE.getActivities;
+
+public final class FaculatyDashBoard_jsp extends org.apache.jasper.runtime.HttpJspBase
+    implements org.apache.jasper.runtime.JspSourceDependent {
+
+  private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
+
+  private static java.util.List<String> _jspx_dependants;
+
+  private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
+
+  public java.util.List<String> getDependants() {
+    return _jspx_dependants;
+  }
+
+  public void _jspService(HttpServletRequest request, HttpServletResponse response)
+        throws java.io.IOException, ServletException {
+
+    PageContext pageContext = null;
+    HttpSession session = null;
+    ServletContext application = null;
+    ServletConfig config = null;
+    JspWriter out = null;
+    Object page = this;
+    JspWriter _jspx_out = null;
+    PageContext _jspx_page_context = null;
+
+    try {
+      response.setContentType("text/html;charset=UTF-8");
+      pageContext = _jspxFactory.getPageContext(this, request, response,
+      			null, true, 8192, true);
+      _jspx_page_context = pageContext;
+      application = pageContext.getServletContext();
+      config = pageContext.getServletConfig();
+      session = pageContext.getSession();
+      out = pageContext.getOut();
+      _jspx_out = out;
+      _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
+
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("<!DOCTYPE html>\n");
+      out.write("<html>\n");
+      out.write("\n");
+      out.write("<title> FACULTY DASHBOARD</title>\n");
+      out.write("<link rel=\"stylesheet\" type=\"text/css\" href=\"BUTTON.css\">\n");
+      out.write("<head>\n");
+      out.write("\n");
+      out.write("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n");
+      out.write("<!-- Add icon library -->\n");
+      out.write("<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\n");
+      out.write("<style>\n");
+      out.write("* {\n");
+      out.write("  box-sizing: border-box;\n");
+      out.write("}\n");
+      out.write("\n");
+      out.write("/* Create two equal columns that floats next to each other */\n");
+      out.write(".column1 {\n");
+      out.write("  float: left;\n");
+      out.write("  width:20%;\n");
+      out.write("  padding: 10px;\n");
+      out.write("  height: 700px; /* Should be removed. Only for demonstration */\n");
+      out.write("}\n");
+      out.write(".column2 {\n");
+      out.write("  float:right;\n");
+      out.write("  width:70%;\n");
+      out.write("  padding: 10px;\n");
+      out.write("  height: 700px; /* Should be removed. Only for demonstration */\n");
+      out.write("}\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("/* Clear floats after the columns */\n");
+      out.write(".row:after {\n");
+      out.write("  content: \"\";\n");
+      out.write("  display: table;\n");
+      out.write("  clear: both;\n");
+      out.write("}\n");
+      out.write("\n");
+      out.write(" body{\n");
+      out.write("    padding:0;\n");
+      out.write("\tmargin:0;\n");
+      out.write("\t}\n");
+      out.write("\t.menu ul{\n");
+      out.write("\tlist-style:none;\n");
+      out.write("\tmargin:0;\n");
+      out.write("\t}\n");
+      out.write("\t.menu ul{\n");
+      out.write("\tlist-style:none;\n");
+      out.write("\tmargin:0;\n");
+      out.write("\t}\n");
+      out.write("\t.menu ul li{\n");
+      out.write("\tpadding:15px;\n");
+      out.write("\tposition:relative;\n");
+      out.write("\twidth:200px;\n");
+      out.write("\tbackground-color:#f9f9f9 ;\n");
+      out.write("\tborder-top:1px solid #BDC3C7;\n");
+      out.write("\t}\n");
+      out.write("\t.menu ul ul{\n");
+      out.write("\ttransition:all 0.3s;\n");
+      out.write("\topacity:0;\n");
+      out.write("\tposition:absolute;\n");
+      out.write("\tvisibility:hidden;\n");
+      out.write("\tleft:90%;\n");
+      out.write("\ttop:-2;\n");
+      out.write("\t}\n");
+      out.write("\t.menu ul li:hover>ul{\n");
+      out.write("\topacity:1;\n");
+      out.write("\tvisibility:visible;\n");
+      out.write("\t}\t\n");
+      out.write("\t.menu ul li a{\n");
+      out.write("\tcolor:#7e7b7f;\n");
+      out.write("\ttext-decoration:none;\n");
+      out.write("\t}\n");
+      out.write("\ttable {\n");
+      out.write("  border-collapse: collapse;\n");
+      out.write("  width: 100%;\n");
+      out.write("  font-size:16px;\n");
+      out.write("  }\n");
+      out.write("  input {\n");
+      out.write("  width: 100%;\n");
+      out.write("  }\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("th, td {\n");
+      out.write("  text-align: left;\n");
+      out.write("  padding: 8px;\n");
+      out.write("}\n");
+      out.write("\n");
+      out.write("tr:nth-child(even) {background-color: #f2f2f2;}\n");
+      out.write("i {\n");
+      out.write("  border: solid black;\n");
+      out.write("  border-width: 0 3px 3px 0;\n");
+      out.write("  display: inline-block;\n");
+      out.write("  padding: 3px;\n");
+      out.write("}\n");
+      out.write("\n");
+      out.write(".right {\n");
+      out.write("  transform: rotate(-45deg);\n");
+      out.write("  -webkit-transform: rotate(-45deg);\n");
+      out.write("}\t\n");
+      out.write(".icon {\n");
+      out.write("  background-color: #f2f2f2;\n");
+      out.write("  border: none;\n");
+      out.write("  color: #5fd900;\n");
+      out.write("  padding: 0px 0px;\n");
+      out.write("  font-size: 13px;\n");
+      out.write("  cursor: pointer;\n");
+      out.write("}\n");
+      out.write(".icon:hover {\n");
+      out.write("  background-color: #acaaac;\n");
+      out.write("}\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("</style>\n");
+      out.write("</head>\n");
+      out.write("<body>\n");
+      out.write("\n");
+      out.write("<h3> SUBJECT NAME(FALL-2016)<h3>\n");
+      out.write("\n");
+      out.write("<div class=\"row\">\n");
+      out.write("  <div class=\"column1\" style=\"background-color\":##ffffff;>\n");
+      out.write("    <div class=\"menu\">\n");
+      out.write("<ul>\n");
+      out.write("<li><a href=\"#\" onclick=\"compileResult()\">Compile Result</a></li>\n");
+      out.write("<li><a href=\"http://localhost:8080/EnterpriseApplication2-war/getStudents.jsp\">Class Students</a> </li>\n");
+      out.write("<li><a href=\"http://localhost:8080/EnterpriseApplication2-war/CLOsection.jsp\">CLOs Attainment Graph</a> </li>\n");
+      out.write("<li><a href=\"http://localhost:8080/EnterpriseApplication2-war/getCLOs.jsp\">CLOs</a></li>\n");
+      out.write("<li><a href=\"http://localhost:8080/EnterpriseApplication2-war/ActivityWeight.jsp\">Activities Weights</a></li>\n");
+      out.write("<li><a href=\"http://localhost:8080/EnterpriseApplication2-war/FMarks.jsp\">Marks</a></li>\n");
+      out.write("<li><a href=\"\">PlOs Attainment</a></li>\n");
+      out.write("<li><a href=\"\"><p>Subjects <i class=\"arrow right\"></i></p></a></li>\n");
+      out.write("</ul>\n");
+      out.write("<ul>\n");
+      out.write("<li><a href=\"\">Basic electrical engineering</a></li>\n");
+      out.write("<li><a href=\"\">linear algebra</a></li>\n");
+      out.write("<li><a href=\"\">data structures and algorithm</a></li>\n");
+      out.write("</ul>\n");
+      out.write("</ul>\n");
+      out.write("</div>\n");
+      out.write("  </div>\n");
+      out.write("  <div class=\"column2\" style=\"background-color\":##ffffff;>\n");
+      out.write("    <a href=\"http://localhost:8080/EnterpriseApplication2-war/AddClassActivity.html\" class=\"btn\">add class activity</a>\n");
+      out.write("\t\n");
+      out.write("<a href=\"http://localhost:8080/EnterpriseApplication2-war/importActivity.jsp\" class=\"btn1\">import class activity</a>\n");
+      out.write("<a onclick=\"location.href='http://localhost:8080/EnterpriseApplication2-war/updateSection.html';\" class=\"btn2\">update section</a>\n");
+      out.write("<a href=\"#\" class=\"btn3\">export class activities</a>\n");
+      out.write("<a onclick=\"location.href='http://localhost:8080/EnterpriseApplication2-war/importActivity.jsp';\" class=\"btn4\">import activity outcome</a> \n");
+      out.write("<pre>      </pre>\n");
+      out.write("<div style='overflow-x:auto;'>\n");
+      out.write("    ");
+ getActivities a=new getActivities();
+          int n=a.getNumOfActv();
+             String[][] Activities=new String[n][5];
+             Activities=a.getActivities(n);
+          
+      out.write("\n");
+      out.write("    <script>\n");
+      out.write("       \n");
+      out.write("            function compileResult()\n");
+      out.write("            {\n");
+      out.write("                var m=90;\n");
+      out.write("                var p=5;\n");
+      out.write("                var f=50;\n");
+      out.write("                window.location=\"http://localhost:8080/EnterpriseApplication2-war/CompilResults.jsp?m=\"+m+\"&p=\"+p+\"&f=\"+f;\n");
+      out.write("            }   \n");
+      out.write("        var n='");
+      out.print(n);
+      out.write("';\n");
+      out.write("        var Activity=new Array();\n");
+      out.write("          var ActName=new Array();\n");
+      out.write("          var ActMarks=new Array();\n");
+      out.write("          var ActDate=new Array();\n");
+      out.write("          var ActCLO=new Array();\n");
+      out.write("           ");
+  for(int j=0;j<n;j++) { 
+      out.write("\n");
+      out.write("             Activity[");
+      out.print( j );
+      out.write("] = '");
+      out.print( Activities[j][0] );
+      out.write("';\n");
+      out.write("               ActName[");
+      out.print( j );
+      out.write("] = '");
+      out.print( Activities[j][1] );
+      out.write("';\n");
+      out.write("                ActDate[");
+      out.print( j );
+      out.write("] = '");
+      out.print( Activities[j][2] );
+      out.write("';\n");
+      out.write("               ActMarks[");
+      out.print( j );
+      out.write("] = '");
+      out.print( Activities[j][3] );
+      out.write("'; \n");
+      out.write("               ActCLO[");
+      out.print( j );
+      out.write("] = '");
+      out.print( Activities[j][4] );
+      out.write("';\n");
+      out.write("               \n");
+      out.write("              ");
+}
+      out.write(" \n");
+      out.write("                       \n");
+      out.write("                   var output=\"<table>\"+\"<tr>\"+\"<th>\"+\"ACTIVITY\"+\"</th>\";\n");
+      out.write("                   output=output+\"<th>\"+\"NAME\"+\"</th>\";\n");
+      out.write("                   output=output+\"<th>\"+\"Total Marks\"+\"</th>\";\n");
+      out.write("                   output=output+\"<th>\"+\"DATE\"+\"</th>\"; \n");
+      out.write("                   \n");
+      out.write("                   output=output+\"<th>\"+\"CLOs\"+\"</th>\"+\"</tr>\"; \n");
+      out.write("                   \n");
+      out.write("                 \n");
+      out.write("                       \n");
+      out.write("                       for(j=0;j<n;j++)\n");
+      out.write("                       {\n");
+      out.write("                           output=output+\"<tr>\";\n");
+      out.write("                           output=output+\"<td>\"+Activity[j]+\"</td>\";\n");
+      out.write("                           output=output+\"<td>\"+\"<a href='#' id=\"+ActName[j]+\" onclick='ActRes(this.id)'>\"+ActName[j]+\"</a>\"+\"</td>\";\n");
+      out.write("                           output=output+\"<td>\"+ActMarks[j]+\"</td>\";\n");
+      out.write("                           output=output+\"<td>\"+ActDate[j]+\"</td>\";                           \n");
+      out.write("                              output=output+\"<td>\"+ActCLO[j]+\"</td>\";\n");
+      out.write("                    output=output+\"<td>\"+\"<button class='icon'><i class='fa fa-edit'>\"+\"</i>\"+\"</button>\"+\"<button  class='icon'>\"+\"<i class='fa fa-trash'>\"+\"</i>\"+\"</button>\"+\"<button class='icon'>\"+\"<i class='fa fa-upload'>\"+\"</i>\"+\"</button><button class='icon'>\"+\"<i class='fa fa-download'>\"+\"</i>\"+\"</button>\"+\"<button class='icon'>\"+\"<i class='fa fa-file-word-o'>\"+\"</i></button></button>\"+\"<button class='icon'>\"+\"<i class='fa fa-file-excel-o'>\"+\"</i>\"+\"</button>\"+\"</td>\";\n");
+      out.write("      output=output+\"</tr>\";                   \n");
+      out.write("    }    \n");
+      out.write("                output=output+\"</table>\";\n");
+      out.write("                            document.write(output);\n");
+      out.write("                           \n");
+      out.write("          function ActRes(ele)\n");
+      out.write("          {       \n");
+      out.write("              \n");
+      out.write("         window.location.href=\"http://localhost:8080/EnterpriseApplication2-war/SSActivityResult.jsp?activity=\"+ele;\n");
+      out.write("    }\n");
+      out.write("                \n");
+      out.write("              \n");
+      out.write("        </script>\n");
+      out.write("\t \n");
+      out.write("   \n");
+      out.write("  \n");
+      out.write("</div>\n");
+      out.write("\n");
+      out.write(" \n");
+      out.write("\n");
+      out.write("</body>\n");
+      out.write("</html>\n");
+      out.write("\n");
+    } catch (Throwable t) {
+      if (!(t instanceof SkipPageException)){
+        out = _jspx_out;
+        if (out != null && out.getBufferSize() != 0)
+          out.clearBuffer();
+        if (_jspx_page_context != null) _jspx_page_context.handlePageException(t);
+        else throw new ServletException(t);
+      }
+    } finally {
+      _jspxFactory.releasePageContext(_jspx_page_context);
+    }
+  }
+}
